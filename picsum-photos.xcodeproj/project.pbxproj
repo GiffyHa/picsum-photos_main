@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		108F6DE52F22212B005A8149 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 108F6DE42F222124005A8149 /* readme.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		108F6D5A2F21F81C005A8149 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		108F6D4C2F21F81B005A8149 /* picsum-photos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "picsum-photos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		108F6D592F21F81C005A8149 /* picsum-photosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "picsum-photosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		108F6D632F21F81C005A8149 /* picsum-photosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "picsum-photosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		108F6DE42F222124005A8149 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,9 +80,8 @@
 		108F6D432F21F81B005A8149 = {
 			isa = PBXGroup;
 			children = (
-				108F6D4E2F21F81B005A8149 /* picsum-photos */,
-				108F6D5C2F21F81C005A8149 /* picsum-photosTests */,
-				108F6D662F21F81C005A8149 /* picsum-photosUITests */,
+				108F6D762F21F930005A8149 /* Project */,
+				108F6DE42F222124005A8149 /* readme.md */,
 				108F6D4D2F21F81B005A8149 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +94,24 @@
 				108F6D632F21F81C005A8149 /* picsum-photosUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		108F6D762F21F930005A8149 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				108F6D4E2F21F81B005A8149 /* picsum-photos */,
+				108F6D772F21F948005A8149 /* PicsumTests */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		108F6D772F21F948005A8149 /* PicsumTests */ = {
+			isa = PBXGroup;
+			children = (
+				108F6D662F21F81C005A8149 /* picsum-photosUITests */,
+				108F6D5C2F21F81C005A8149 /* picsum-photosTests */,
+			);
+			path = PicsumTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				108F6DE52F22212B005A8149 /* readme.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
