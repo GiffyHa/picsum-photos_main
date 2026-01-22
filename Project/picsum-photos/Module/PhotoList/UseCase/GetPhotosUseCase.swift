@@ -20,6 +20,10 @@ final class GetPhotosUseCaseImpl: GetPhotosUseCase {
     }
 
     func execute(page: Int, limit: Int) async throws -> [PhotosModel] {
-        try await repository.fetchPhotos(page: page, limit: limit)
+        do {
+            return try await repository.fetchPhotos(page: page, limit: limit)
+        } catch {
+            throw error
+        }
     }
 }

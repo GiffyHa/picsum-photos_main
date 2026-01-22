@@ -20,6 +20,10 @@ final class PhotosRepositoryImpl: PhotosRepository {
     }
 
     func fetchPhotos(page: Int, limit: Int) async throws -> [PhotosModel] {
-        try await apiClient.getPhotos(page: page, limit: limit)
+        do {
+            return try await apiClient.getPhotos(page: page, limit: limit)
+        } catch {
+            throw error
+        }
     }
 }

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PhotosMainView: View {
     @StateObject var viewModel: PhotosViewModel
-    @State private var showBookmarks: Bool = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -19,6 +18,20 @@ struct PhotosMainView: View {
 
             // CONTENT
             ScrollView {
+                if let errorMessage = viewModel.errorMessage {
+                    VStack(spacing: 12) {
+                        Text(errorMessage)
+                            .font(.subheadline)
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.red)
+
+                        Button("Retry") {
+                            viewModel.loadInitial()
+                        }
+                        .font(.subheadline)
+                    }
+                    .padding()
+                }
                 LazyVStack(spacing: 16) {
                     ForEach(viewModel.photos) { photo in
                         PhotosCardView(

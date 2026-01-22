@@ -39,7 +39,10 @@ final class PhotosViewModelTests: XCTestCase {
 
         await viewModel.loadInitial()
 
-        XCTAssertNotNil(viewModel.errorMessage)
+        XCTAssertEqual(
+            viewModel.errorMessage,
+            APIServiceError.network.errorDescription
+        )
         XCTAssertTrue(viewModel.photos.isEmpty)
         XCTAssertFalse(viewModel.isLoading)
     }

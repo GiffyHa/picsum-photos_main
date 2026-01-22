@@ -27,6 +27,7 @@ final class PhotosViewModel: ObservableObject {
     }
 
     func loadInitial() {
+        errorMessage = nil
         reset()
         loadMore()
     }
@@ -51,7 +52,8 @@ final class PhotosViewModel: ObservableObject {
                     currentPage += 1
                 }
             } catch {
-                errorMessage = error.localizedDescription
+                errorMessage = (error as? LocalizedError)?.errorDescription
+                    ?? "Terjadi kesalahan."
             }
 
             isLoading = false
